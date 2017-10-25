@@ -3,10 +3,10 @@ import plugin from './plugin';
 
 document.getElementById('example').innerHTML = (`
     <h1>示例</h1>
-    <div class="ex"></div>
+    <div class="ex-1"></div>
 `);
 
-document.querySelector('.ex').innerHTML = (`
+document.querySelector('.ex-1').innerHTML = (`
     <div class="imgUpload"></div>
     <code>
         &lt;div class="imgUpload"&gt;&lt;/div&gt; </br></br>

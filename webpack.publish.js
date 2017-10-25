@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');//构建时清理
 const autoprefixer = require('autoprefixer');//补全css各种hack
 
 module.exports = {
-    devtool: "source map",
+    devtool: "cheap-module-source-map",
     entry: {
         plugin: './src/js/plugin.js'
     },

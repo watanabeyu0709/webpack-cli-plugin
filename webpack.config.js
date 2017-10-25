@@ -1,17 +1,3 @@
-/*
-    总体：热加载(不含组件热加载),全局挂载,自动清理产出文件夹,区分处理开发和发布环境
-
-    html：html模板引擎,svg行内挂载
-
-    css: less sass 分离样式表 自动补全前缀hack 支持css4(与less sass 冲突 选择性使用)
-
-    js: 支持es6 typescript 代码分离 提取公共模块 丑化
-
-    图片：压缩 base64编码
-
-    字体：压缩
-*/
-
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');//html模板引擎
@@ -117,20 +103,12 @@ let webpackConfig = module.exports = {
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
         alias: {
-            'vue$': 'vue/dist/vue.esm.js',
             '^': path.resolve(__dirname, 'src')
         }
     },
     plugins: [
         //清理dist
         new CleanWebpackPlugin(['dist']),
-        //react 压缩处理
-        (process.env.NODE_ENV === 'production')?
-            new webpack.DefinePlugin({
-                "process.env": {
-                    NODE_ENV: JSON.stringify("production")
-                }
-            }):function(){},
         //自动产出html
         new HtmlWebpackPlugin({
             filename: 'index.html',
