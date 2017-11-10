@@ -108,7 +108,8 @@ let webpackConfig = module.exports = {
     },
     plugins: [
         //清理dist
-        new CleanWebpackPlugin(['dist']),
+        (process.env.NODE_ENV === 'production')?
+            new CleanWebpackPlugin(['dist']):function () {},
         //自动产出html
         new HtmlWebpackPlugin({
             filename: 'index.html',
