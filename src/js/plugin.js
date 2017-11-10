@@ -1,6 +1,6 @@
 import '../css/plugin.scss';
 
-class plugin {
+class Plugin {
     constructor(props){
         init();
     }
@@ -9,4 +9,4 @@ class plugin {
     }
 }
 
-export default plugin;
+export default Plugin;

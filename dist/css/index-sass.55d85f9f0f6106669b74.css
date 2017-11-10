@@ -399,6 +399,13 @@ template {
     box-sizing: border-box; }
   #example > div {
     margin-top: 15px; }
+    #example > div .box {
+      background: #f2f2f2;
+      padding: 15px; }
+      #example > div .box + .box {
+        margin-top: 15px; }
+      #example > div .box .title {
+        margin: 0 0 10px; }
     #example > div .btn {
       border-radius: 3px;
       padding: 7px 12px;
@@ -423,4 +430,4 @@ template {
       display: block;
       margin-top: 10px; }
 
-/*# sourceMappingURL=index-sass.d9fb5f887405f35640c1.css.map*/
+/*# sourceMappingURL=index-sass.55d85f9f0f6106669b74.css.map*/
