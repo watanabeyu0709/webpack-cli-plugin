@@ -1,64 +1,37 @@
 ## Introduce
-this script builds a DOM that can be clicked back to the top of the page
+this is a simple self use cli for making npm package with webpack
+
+## Base on
+node `8.6.0`
+npm `5.3.0`
 
 ## Quick to start
-Using npm:
-```shell
-$ npm install --save yu-scroll-top
-$ import ScrollTop from 'yu-scroll-top'
-```
+1.make sure you have install webpack npm with global
+2.download this project
+3.npm install
+4.npm run dev `develop mode`
+5.npm run build `build mode`
+6.add `module.exports =` in the head of `./lib/plugin.js`
+7.npm publish
 
-## Example
-You can use `npm run dev` to check the example file in node package
-```js
-ScrollTop({
-            zIndex:999,
-            icon:'rocket',
-            shape:'rounded-rectangle',
-            background:'lightsalmon',
-            color:'lightgreen',
-            text:'click </br> to </br> the top',
-            hover:true,
-            btnLike:true,
-            animation:false,
-            distance:0,
-            correct:true,
-            position:{
-                right:'80px',
-                bottom:'80px',
-            },
-            ready(){
-                console.log('ready to scroll')
-            },
-            callback(){
-                console.log('scroll over')
-            }
-        })
+### Directory
 ```
-
-## JSDoc
-```jsdoc
- * @param {object[]} option
- * @param {number} [option[].zIndex = 98'] - the index of dom
- * @param {string} [option[].icon = ''] - the icon of dom if you had use iconfont in you project
- * @param {string} [option[].shape = 'circle'] - the shape of dom , accept 'circle' 'square' & 'rounded-rectangle'
- * @param {string} [option[].background = 'rgba(0,0,0,.6)'] - background of the dom
- * @param {string} [option[].color = '#ffffff'] - color of the dom
- * @param {string} [option[].text = ''] - text of the dom
- * @param {boolean} [option[].hover = false] - if you set up icon and text you can switch on the hover effect
- * @param {boolean} [option[].btnLike = false] - if you want the dom to looks like a btn
- * @param {boolean} [option[].animation = false] - if you want the animation of scroll
- * @param {number} [option[].distance = 50] - when should show dom , the scroll distance of screen
- * @param {boolean} [option[].correct = false] - should we correct the Width to height ratio as 1:1
- * @param {object[]} [option[].position = {right:'15px',bottom:'15px'}] - the position of dom
- * @param {string} [option[].position[].top = ''] - position top of the dom
- * @param {string} [option[].position[].bottom = '15px'] - position bottom of the dom
- * @param {string} [option[].position[].left = ''] - position left of the dom
- * @param {string} [option[].position[].right = '15px'] - position right of the dom
- * @param {callback} [option[].ready] - before scroll
- * @param {callback} [option[].callback] - after scroll
+|-- dist #build files for example
+|-- lib #npm main files for publish to npm
+|-- node_modules #node packages
+|-- src #dev folder
+    |-- css #style
+        |-- app.scss #example style
+        |-- plugin.scss #plugin style
+    |-- img #images
+    |-- js #scripts
+        |-- index.js #example script
+        |-- plugin.js #plugin script
+    |-- template.html #html template for webpack
+|--- .babelrc #babel conf
+|--- .gitignore #git ignore conf
+|--- package.json #all dependencies
+|--- postcss.config.js #postcss conf
+|--- README.md #this file
+|--- webpack.config.js #webpack file
 ```
-
-## Links
-[![github](http://p0kpwl4c8.bkt.clouddn.com/icon/github_c.png!icon_sm "https://github.com/watanabeyu0709/yu-scroll-top")](https://github.com/watanabeyu0709/yu-scroll-top)
-[![npm](http://p0kpwl4c8.bkt.clouddn.com/icon/npm_c.png!icon_sm "https://www.npmjs.com/package/yu-scroll-top")](https://www.npmjs.com/package/yu-scroll-top)
