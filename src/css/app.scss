@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import '~normalize.css'; /*reset css*/
+@import url("http://at.alicdn.com/t/font_521701_dvupefxe3cbzw7b9.css");
 
 #example{
   margin: 0 auto;
@@ -52,4 +53,9 @@
       margin-top: 10px;
     }
   }
+}
+
+body{
+  height: 3000px;
+  background: linear-gradient(to bottom, darkseagreen 0%,dodgerblue 100%);
 }

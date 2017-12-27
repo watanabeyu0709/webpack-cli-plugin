@@ -1,7 +1,7 @@
 {
-  "name": "webpack-cli-plugin",
-  "version": "1.0.10",
-  "description": "selfuse webpack-cli with base config",
+  "name": "yu-scroll-top",
+  "version": "1.0.3",
+  "description": "this script builds a DOM that can be clicked back to the top of the page",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -41,6 +41,7 @@
     "webpack-dev-server": "^2.9.2"
   },
   "dependencies": {
+    "color": "^2.0.1",
     "normalize.css": "^7.0.0"
   }
 }
