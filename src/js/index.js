@@ -3,7 +3,9 @@ import Plugin from './plugin';
 
 document.getElementById('example').innerHTML = (`
     <h1>示例</h1>
-    <div class="ex-1"></div>
+    <div class="ex-1">
+      
+    </div>
 `);
 
 document.querySelector('.ex-1').innerHTML = (`
@@ -36,8 +38,7 @@ document.querySelector('.ex-1').innerHTML = (`
     &nbsp;&nbsp;&nbsp;&nbsp;console.log('scroll over') <br>
     &nbsp;&nbsp;} <br>
     });
-    </code>
-`);
+    </code>`)
 
 window.onload=function () {
     new Plugin({});
@@ -64,5 +65,5 @@ window.onload=function () {
             console.log('scroll over')
         }
     });
-};
+}
 
