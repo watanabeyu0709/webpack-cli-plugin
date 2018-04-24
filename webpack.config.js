@@ -10,7 +10,7 @@ const babili = require('babili-webpack-plugin')//babel压缩
 let webpackConfig = module.exports = {
     devtool: process.env.NODE_ENV === 'production'?"cheap-module-source-map":"cheap-module-eval-source-map",
     entry: {
-        index: './src/js/index.js',
+        index: ['babel-polyfill','./src/js/index.js']
     },
     output: {
         filename: process.env.NODE_ENV === 'production'?'js/[name].bundle.[chunkhash].js':'js/[name].bundle.js',
@@ -50,6 +50,7 @@ let webpackConfig = module.exports = {
                     options: {
                         presets: [
                             "env",
+                            "react",
                             "stage-3"
                         ]
                     }
